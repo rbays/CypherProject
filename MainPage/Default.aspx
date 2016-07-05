@@ -5,25 +5,44 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
+   
     <form id="form1" runat="server">
-    <div>
-        <asp:Label ID="Label2" runat="server" Text="Please enter some characters for a key or randomly generate one, the longer the stronger"></asp:Label>
-        <asp:Button ID="Button2" runat="server" Text="Generate Key" />
+    <div class="container">
+    <h1 class ="jumbotron">Encrypt and decrypt messages</h1>
+    <div class ="row">
+         <div class="col-xs-8"><asp:Label CSSclass="writing" ID="Label2" runat="server" Text="Enter a key or generate one.<br/>Longer is stronger."></asp:Label></div>
+          <div class="col-xs-4"><asp:Button CSSclass="button" ID="keyGenButton" runat="server" Text="Generate Cypher Key" OnClick="keyGenButton_Click" /></div>
+    </div> <!--end of first row-->
+    <div class ="row">
+            <div class="col-xs-4"> <asp:Label CSSclass="writing" ID="Label1" runat="server" Text="Enter Key: "></asp:Label></div>
+            <div class="col-xs-4"><asp:TextBox CssClass="textBox" ID="keyTextBox" runat="server" Width="100%"></asp:TextBox></div>
+            <div class="col-xs-4"><asp:Button CSSclass="button" ID="checkKeyButton" runat="server" Text="Check Cypher Key" OnClick="checkKeyButton_Click" /></div>
+    </div><!--end of keygen row-->
+    <div class="row">    
+            <div class="col-xs-4"><asp:Label CSSclass="writing" ID="staticCurrentKeyLabel" runat="server" Text="Current Cypher Key: "></asp:Label></div>
+            <div class="col-xs-4"><asp:TextBox CssClass="textBox" ID="currentKeyLabel" runat="server" ReadOnly="True" Width="100%"></asp:TextBox></div>
+            <div class="col-xs-4"><asp:Label CSSclass="writing" ID="invalidKeyLabel" runat="server" Text=" "></asp:Label></div>
+    </div><!--end of key row-->
+    <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+            <asp:Label ID="messageCharWarningLabel" runat="server" Text="Only the following characters will be decrypted:<br>a-z A-Z 0-9 .,?!'@£$# and space.<br>Other characters will be decrypted as '#'"></asp:Label>
+        </div>
     </div>
-        <p>
-            <asp:Label ID="Label1" runat="server" Text="Key: "></asp:Label>
-            <asp:TextBox ID="keyTextBox" runat="server" Width="600px"></asp:TextBox>
-        </p>
-        <p>
-            <asp:TextBox ID="rawTextBox" runat="server" Height="178px" Width="350px"></asp:TextBox>
-            <asp:Button ID="encodeButton" runat="server" Text="encode -&gt;" OnClick="encodeButton_Click" />
-        <asp:Button ID="decodeButton" runat="server" Text="Decode&lt;-" OnClick="Button1_Click" />
-            <asp:TextBox ID="encodedTextBox" runat="server" Height="178px" Width="350px"></asp:TextBox>
-        </p>
-        <p>
-            &nbsp;</p>
+    <div class="row">
+        <div class="col-xs-12"><asp:TextBox ID="rawTextBox" CssClass="textBox" runat="server" TextMode="MultiLine"></asp:TextBox></div>
+    </div><!--end of text box1 row-->
+    <div class="row"> 
+        <div class="col-xs-3 col-xs-offset-3"><asp:Button CSSclass="button" ID="encodeButton" runat="server" Text="apply your cypher" OnClick="encodeButton_Click" Enabled="False" /></div>
+        <div class="col-xs-3"><asp:Button CSSclass="button" ID="decodeButton" runat="server" Text="Remove your cypher" OnClick="decodeButton_Click" Enabled="False" /></div>
+    </div><!--end of encrypt buttons row-->
+    <div class="row">
+        <div class="col-xs-12"><asp:TextBox ID="encodedTextBox" CssClass="textBox" runat="server" TextMode="MultiLine" ReadOnly="True"></asp:TextBox></div>
+    </div><!--end of text box2 row-->
+    </div>
     </form>
 </body>
 </html>
