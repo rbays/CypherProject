@@ -1,9 +1,38 @@
 ﻿#rawTextBox, #encodedTextBox {
     height:100px;
+    width:65%;
 }
 
-.textBox{
+#encodedTextBox{
+    margin-top:5px;
+    height:250px;
+    background:none;
+    border:none;
+}
+.jumbotron{
+    background-image:url(old_paper6.jpg);
+    background-position:center;
+    text-align:center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border:2px solid #524c3d;
+}
+
+
+#parchmentBox{
     width:100%;
+    padding-bottom:55%;
+    background-image:url(emptyScrollClipped.png);
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+
+
+
+
+.textBox{
+    width:80%;
+    
+    align-items:center;
     border-radius:5px;
     height:40px;
     border:2px solid #948a64;
@@ -11,7 +40,8 @@
 body{
     
     font-size:1.5em;
-    background-image:url(camopattern.jpg);
+    background-image:url(cobble-stones-photoshop-patterns.jpg);
+    background-size:90%;
 }
 
 div{
@@ -19,20 +49,17 @@ div{
 }
 
 .container{
-    background-color:rgba(180,160,120,0.8);
+    box-shadow:rgba(0,0,0,0.6) 10px 10px 5px;
+    background-image:url(rustic-wood-panel-background-free.jpg);
+    background-size:contain;
     font-family:'Times New Roman';
     font-weight:bolder;
-    border-radius: 5px;
+    border-radius: 10px;
     text-decoration:underline solid;
 }
 
 
-.jumbotron{
-    background-color:rgba(120,100,70,0.8);
-    text-align:center;
-    font-family:Stencil;
-    border:2px solid #524c3d;
-}
+
 
 .button{
     border-radius: 5px;

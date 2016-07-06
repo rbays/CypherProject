@@ -33,14 +33,18 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-12"><asp:TextBox ID="rawTextBox" CssClass="textBox" runat="server" TextMode="MultiLine"></asp:TextBox></div>
+        <div class="col-xs-12"><asp:TextBox ID="rawTextBox" CssClass="textBox center-block" runat="server" TextMode="MultiLine"></asp:TextBox></div>
     </div><!--end of text box1 row-->
     <div class="row"> 
         <div class="col-xs-3 col-xs-offset-3"><asp:Button CSSclass="button" ID="encodeButton" runat="server" Text="apply your cypher" OnClick="encodeButton_Click" Enabled="False" /></div>
         <div class="col-xs-3"><asp:Button CSSclass="button" ID="decodeButton" runat="server" Text="Remove your cypher" OnClick="decodeButton_Click" Enabled="False" /></div>
     </div><!--end of encrypt buttons row-->
     <div class="row">
-        <div class="col-xs-12"><asp:TextBox ID="encodedTextBox" CssClass="textBox" runat="server" TextMode="MultiLine" ReadOnly="True"></asp:TextBox></div>
+        <div class="col-xs-12" >
+            <div id="parchmentBox">
+                <asp:TextBox ID="encodedTextBox" CssClass="textBox center-block" runat="server" TextMode="MultiLine" ReadOnly="True"></asp:TextBox>
+            </div>
+        </div>
     </div><!--end of text box2 row-->
     </div>
     </form>
