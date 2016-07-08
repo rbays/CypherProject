@@ -11,11 +11,13 @@ public partial class _Default : System.Web.UI.Page
 {
     static Key currentKey;
     static String currentKeyString = "";
-    
+        
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        messageCharWarningLabel.Visible = false;    
+        messageCharWarningLabel.Visible = false;
+        invalidKeyLabel.Visible = false;
+               
     }
 
     protected void encodeButton_Click(object sender, EventArgs e)
@@ -69,10 +71,12 @@ public partial class _Default : System.Web.UI.Page
         if (Key.validKey)
         {
             invalidKeyLabel.Text = " ";
+            invalidKeyLabel.Visible = false;
         }
         else
         {
-            invalidKeyLabel.Text = "Illegal characters: '" + invalidChar.ToString() + "'";
+            invalidKeyLabel.Text = "Illegal character: '" + invalidChar.ToString() + "'";
+            invalidKeyLabel.Visible = true;
         }
         setButtonAvail();
     }

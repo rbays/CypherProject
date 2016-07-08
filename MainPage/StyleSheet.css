@@ -13,8 +13,11 @@
     background-image:url(old_paper6.jpg);
     background-position:center;
     text-align:center;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border:2px solid #524c3d;
+    font-family:'Arabic Typesetting';
+    font-size:3em;
+    box-shadow:rgba(0,0,0,0.8) 5px 5px 5px;
+    border:none;
+    border-radius:0px;
 }
 
 
@@ -25,9 +28,6 @@
     background-size:contain;
     background-repeat:no-repeat;
 }
-
-
-
 
 .textBox{
     width:80%;
@@ -58,26 +58,31 @@ div{
     text-decoration:underline solid;
 }
 
-
-
-
 .button{
-    border-radius: 5px;
-    background-color:#979797;
-    font-weight:800;
-    box-shadow:rgba(0,0,0,0.2) 2px 2px inset;
+    border-radius: 7px;
+    background-image:url(iron_texture.jpg);
+    font-weight:900;
+    font-size:larger;
+    color:rgba(0,0,0,0.8);
+    box-shadow:rgba(0,0,0,0.6) -3px -3px 1px inset;
     width:100%;
     height:40px;
     border:none;
+    
 }
 .button:disabled{
     background-color:#e1e1e1;
-    color:#b7b7b7;
+    color:rgba(0,0,0,0.4);
 }
 
 .writing{
     float:right;
     text-align:right;
+    background-image:url(old_paper6.jpg);
+    padding: 5px;
+    border-radius:5px;
+    box-shadow:rgba(0,0,0,0.8) 5px 3px 5px;
+    border:2px outset rgba(111, 62, 8, 0.75);
 }
 
 #messageCharWarningLabel{
